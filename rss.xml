@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Antony's Blog]]></title><description><![CDATA[A starter blog for day to day improvements]]></description><link>http://blog.antonyjmalakkaran.codes</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 29 May 2020 01:54:06 GMT</lastBuildDate><item><title><![CDATA[Everybody loves emoji]]></title><description><![CDATA[How to start to place emoji in gatsby Lets face it everyone likes emojis, and would like to include them in code , but how to do it.
+Well in…]]></description><link>http://blog.antonyjmalakkaran.codes/emoji/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/emoji/</guid><pubDate>Fri, 29 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to start to place emoji in gatsby&lt;/h2&gt;
+&lt;p&gt;Lets face it everyone likes emojis, and would like to include them in code , but how to do it.
+Well in gatsby  it done like this :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --save gatsby-remark-emoji&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;gatsby-remark-emoji which parses the code and replaces the emoji&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --save gatsby-remark-a11y-emoji&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;gatsby-remark-a11y-emoji which wraps the emoji into &lt;span role=&quot;img&quot;&gt;&lt;/span&gt;.🙈&lt;/p&gt;
+&lt;p&gt;It works after adding it to your gatsby-config.js file
+and this happend,
+Gatsby is 💯
+now I can have as many emojis i want 😃 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Now Lets Talk VSCODE.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;which I liked the most is &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Emoji
+perkovec.emoji&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;which help to insert the emoji from command pallate 👏,&lt;/p&gt;
+&lt;p&gt;If you are wondering about snippets try prismjs&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; --save gatsby-remark-prismjs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It works after adding it to your gatsby-config.js file,
+but I was just a bit disappointed by the default themes availables. I like one-monokai theme for VSCode. I wanted to use it for my code snippets on the blog. This was made possible thanks to &lt;a href=&quot;https://github.com/konnyakuxzy/prism-one-monokai/blob/master/prism-one-monokai.css&quot;&gt;@konnyakuxzy&lt;/a&gt; . just copy it in theme folder and require it in browser.js
+voila ⚡&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Start a blog in 15 min.]]></title><description><![CDATA[How to start a blog in 15 min Start with cloning the gatsby gatsby-starter-blog Template 🙈 we got the template the next question is where…]]></description><link>http://blog.antonyjmalakkaran.codes/start-blog/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/start-blog/</guid><pubDate>Thu, 28 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to start a blog in 15 min&lt;/h2&gt;
+&lt;p&gt;Start with cloning the gatsby gatsby-starter-blog Template 🙈&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/gatsbyjs/gatsby-starter-blog.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;we got the template the next question is where to host, as hosting can be expensive and we are looking at a ~100 page static website. there is no need for hosting, here is where github pages comes to the rescue 🔥.
+we will go in steps from now:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Make a github repo named username.github.io (this will be your domain) 🌏&lt;/li&gt;
+&lt;li&gt;Then make a remote with this repo from the cloned directory&lt;/li&gt;
+&lt;li&gt;The tricky 🎩 part is that, github only allows the master branch to launch the site (which means gh-page package wont work 😢)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Intialize git in the public directory in the cloned repo, not find anything run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and then&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; public &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;but worry not I have found a work around&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&quot;masterdeploy&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gatsby build &amp;amp;&amp;amp; cd public &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -m &apos;default&apos; &amp;amp;&amp;amp; git push origin master&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;add this to “scripts” in package.json file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Make nessary changes to repo to make it your own.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;run this in terminal&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run masterdeploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;There is no step 8, You are all done&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Happy blogging 😃 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I will put customization I made in a later post stay tooned.&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. I like to thank Kiran…]]></description><link>http://blog.antonyjmalakkaran.codes/hello-world/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/hello-world/</guid><pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new blog! How exciting!&lt;/p&gt;
+&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
+&lt;p&gt;I like to thank Kiran Anto,my senior in  college who gave me the motivation to do so.&lt;/p&gt;
+&lt;p&gt;The Aim of this Blog is to Record all the small achivements of the day.&lt;/p&gt;
+&lt;p&gt;As in the book Atomic Habits says Small changes compound to Big diffrences.&lt;/p&gt;
+&lt;p&gt;If You want to check out the book try Pdf-Drive&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.pdfdrive.com/&quot;&gt;Pdf Drive&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Quotes from Atomic Habits&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;You do not rise to the level of your goals. You fall to the level of your systems.&lt;/li&gt;
+&lt;li&gt;We often dismiss small changes because they don’t seem to matter very much in the moment.&lt;/li&gt;
+&lt;li&gt;Time magnifies the margin between success and failure. It will multiply whatever you feed it. &gt;    Good habits make time your ally. Bad habits make time your enemy.&lt;/li&gt;
+&lt;li&gt;Decide the type of person you want to be. Prove it to yourself with small wins.&lt;/li&gt;
+&lt;li&gt;It’s only by making the fundamentals of life easier that you can create the mental space needed  &gt; for free thinking and creativity.&lt;/li&gt;
+&lt;li&gt;Before we can effectively build new habits, we need to get a handle on our current ones.&lt;/li&gt;
+&lt;li&gt;Standardize before you optimize. You can’t improve a habit that doesn’t exist.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/91edd729717b93302e6bcf98fe80973a/6912c/atomic-habits.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 151.35135135135135%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQX/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAe2gZtiYYlkNKB//xAAaEAEAAwADAAAAAAAAAAAAAAABAAIRAxAS/9oACAEBAAEFArTXrGYzLRrMJxo1Rnm0DD//xAAXEQEAAwAAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/Aa1L/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8BpD//xAAcEAACAgIDAAAAAAAAAAAAAAAAMQEQITJBkaH/2gAIAQEABj8C5FTGOmYMT4bR1X//xAAdEAEAAwADAAMAAAAAAAAAAAABABEhMUFxYYGR/9oACAEBAAE/IUjh+Jvqrxhx39zfDzMZID1tiIqqN4lgVl9xriHzaMCFQV5P/9oADAMBAAIAAwAAABAz7TL/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EIQQhvD/xAAYEQADAQEAAAAAAAAAAAAAAAAAASERcf/aAAgBAgEBPxDg0aCip//EACEQAQACAgEDBQAAAAAAAAAAAAEAESExQZGhsVFhcYHh/9oACAEBAAE/EKQ53dkejARZ5UT5jsoC81sTJbClB55PEt05sC8ePmAKR1/I0UrVUzuVsgrut9ZYVY0pPaFsCyZHeKKMhSIp+rhQwOBU/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Atomic Habits&quot;
+        title=&quot;Atomic Habits&quot;
+        src=&quot;/static/91edd729717b93302e6bcf98fe80973a/1c72d/atomic-habits.jpg&quot;
+        srcset=&quot;/static/91edd729717b93302e6bcf98fe80973a/a80bd/atomic-habits.jpg 148w,
+/static/91edd729717b93302e6bcf98fe80973a/1c91a/atomic-habits.jpg 295w,
+/static/91edd729717b93302e6bcf98fe80973a/1c72d/atomic-habits.jpg 590w,
+/static/91edd729717b93302e6bcf98fe80973a/a8a14/atomic-habits.jpg 885w,
+/static/91edd729717b93302e6bcf98fe80973a/fbd2c/atomic-habits.jpg 1180w,
+/static/91edd729717b93302e6bcf98fe80973a/6912c/atomic-habits.jpg 1692w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
