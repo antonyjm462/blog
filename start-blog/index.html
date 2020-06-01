@@ -8,16 +8,15 @@ we will go in steps from now:</p>
 <li>Then make a remote with this repo from the cloned directory</li>
 <li>The tricky 🎩 part is that GitHub only allows the master branch to launch the site (which means gh-page package won’t work 😢)</li>
 <li>
-<p>Initialize git in the public directory in the cloned repo, not find anything run:</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> run deploy</code></pre></div>
+<p>But worry not I have found a work around, Initialize git in the public directory in the cloned repo, If public directory not found run:</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">gatsby build</code></pre></div>
 <p>and then</p>
 <div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token builtin class-name">cd</span> public <span class="token operator">&amp;&amp;</span> <span class="token function">git</span> init</code></pre></div>
 </li>
 <li>
-<p>but worry not I have found a work around</p>
+<p>Add this to “scripts” in package.json file. so that you can deploy changes with a single command <code class="language-text">npm run masterdeploy</code></p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token string">"masterdeploy"</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">gatsby build &amp;&amp; cd public &amp;&amp; git add . 
 &amp;&amp; git commit -m 'default' &amp;&amp; git push origin master</span><span class="token template-punctuation string">`</span></span></code></pre></div>
-<p>add this to “scripts” in package.json file.</p>
 </li>
 <li>Make necessary changes to the repo to make it your own.</li>
 <li>
