@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Antony's Blog]]></title><description><![CDATA[A starter blog for day to day improvements]]></description><link>http://blog.antonyjmalakkaran.codes</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Jun 2020 00:53:23 GMT</lastBuildDate><item><title><![CDATA[Free Udemy courses, Next Level]]></title><description><![CDATA[Free Udemy courses, Next Level In my last post I told you about how I managed to pull out udemy course URLs, but still clicking from a text…]]></description><link>http://blog.antonyjmalakkaran.codes/udemy_cont/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/udemy_cont/</guid><pubDate>Sun, 31 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Free Udemy courses, Next Level&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Antony's Blog]]></title><description><![CDATA[A starter blog for day to day improvements]]></description><link>http://blog.antonyjmalakkaran.codes</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Jun 2020 16:49:35 GMT</lastBuildDate><item><title><![CDATA[Let Cron do the Job.]]></title><description><![CDATA[How to set up Cron job in Linux Everybody forgets to run a script sometime, but how to schedule these tasks, this is where cron is a big…]]></description><link>http://blog.antonyjmalakkaran.codes/cron/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/cron/</guid><pubDate>Mon, 01 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to set up Cron job in Linux&lt;/h2&gt;
+&lt;p&gt;Everybody forgets to run a script sometime, but how to schedule these tasks, this is where cron is a big help ✌.&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The software utility Cron is a time-based job scheduler in Unix-like computer operating systems. Users that set up and maintain software environments use cron to schedule jobs (commands or shell scripts) to run periodically at fixed times, dates, or intervals.” - &lt;strong&gt;Wikipedia&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;which is exactly which we need, but how to set up ?&lt;br&gt;
+if you are running on a Linux machine you are in luck, it’s already installed.👊&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cron&lt;/span&gt; start
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cron&lt;/span&gt; status&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;to start cron and to get status, but to get user-specific crontab use:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;crontab&lt;/span&gt; -e&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;this will show diffrent editor options to choose from,choose the nano version, as it’s the most simplest.
+then follow this format&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Example of job definition:&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# .---------------- minute (0 - 59)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# |  .------------- hour (0 - 23)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# |  |  .---------- day of month (1 - 31)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# |  |  |  |  |&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# *  *  *  *  *   command to be executed&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;for example:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;22&lt;/span&gt; * * * /bin/sh /home/antony/Code/Telegram/job.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ya I know, for automation of udemy script 🙈
+to create a cron job for more info on formatting use &lt;a href=&quot;https://crontab.guru/&quot;&gt;guru&lt;/a&gt; but you can’t use normal env variables inside cron. but don’t be dishearted there is a way.&lt;br&gt;
+Embed the file inside job.sh which contains the script 👉&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token shebang important&quot;&gt;#!/bin/sh&lt;/span&gt;
+python3 telegram.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And don’t forget to give all the files executable permission&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; +x job.sh
+&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; +x filename.ext&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If problems arise :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Make sure the script in /etc/cron.d/ is owned by root:root
+&lt;code class=&quot;language-text&quot;&gt;chmod root:root /etc/cron.d/script&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make sure the script ends with a newline&lt;/li&gt;
+&lt;li&gt;If the script seem to not work try with a simples one e.g. &lt;code class=&quot;language-text&quot;&gt;* * * * * root echo test &amp;gt;&amp;gt; /tmp/* cron_temp&lt;/code&gt; and monitor &lt;code class=&quot;language-text&quot;&gt;/tmp/cron_temp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;service cron status will provide hints of how well the line executed&lt;/li&gt;
+&lt;li&gt;If the lines executed seems to be the culprit try running it as the user in the cron file &lt;code class=&quot;language-text&quot;&gt;sudo -u username command-to-be-run&lt;/code&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+always use &lt;code class=&quot;language-text&quot;&gt;sudo -u username command-to-be-run&lt;/code&gt; before you finish the process&lt;br&gt;
+All done, Sit back and enjoy.✌&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Free Udemy courses, Next Level]]></title><description><![CDATA[Free Udemy courses, Next Level In my last post I told you about how I managed to pull out udemy course URLs, but still clicking from a text…]]></description><link>http://blog.antonyjmalakkaran.codes/udemy_cont/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/udemy_cont/</guid><pubDate>Sun, 31 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Free Udemy courses, Next Level&lt;/h2&gt;
 &lt;p&gt;In my last post I told you about how I managed to pull out udemy course URLs, but still clicking from a text file can be pretty tough if it contains ~500 links per day, then What to do 🤔 &lt;br&gt;
 👉 HTML and mouse automation&lt;/p&gt;
 &lt;blockquote&gt;
