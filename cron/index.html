@@ -20,13 +20,20 @@ then follow this format</p>
 <span class="token comment"># |  |  |  |  |</span>
 <span class="token comment"># *  *  *  *  *   command to be executed</span></code></pre></div>
 <p>for example:</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token number">15</span> <span class="token number">22</span> * * * /bin/sh /home/antony/Code/Telegram/job.sh</code></pre></div>
-<p>Ya I know, for automation of udemy script 🙈
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token assign-left variable">MAILTO</span><span class="token operator">=</span>antonyjm462@gmail.com
+<span class="token assign-left variable"><span class="token environment constant">SHELL</span></span><span class="token operator">=</span>/bin/bash
+<span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/bin:/usr/bin:/my/path/bin
+<span class="token assign-left variable"><span class="token environment constant">DISPLAY</span></span><span class="token operator">=</span>:0
+<span class="token assign-left variable"><span class="token environment constant">XAUTHORITY</span></span><span class="token operator">=</span>/home/antony/.Xauthority
+<span class="token number">40</span> <span class="token number">22</span> * * * <span class="token builtin class-name">.</span> /etc/profile<span class="token punctuation">;</span> /home/antony/Code/Telegram/job.sh <span class="token operator">>></span> /home/antony/Code/Telegram/cron.log <span class="token operator"><span class="token file-descriptor important">2</span>></span><span class="token file-descriptor important">&amp;1</span></code></pre></div>
+<p>Ya I know, for automation of udemy script 🙈.
+you can also define the path var inside the crontab also with other variables for the script to work.<br>
 to create a cron job for more info on formatting use <a href="https://crontab.guru/">guru</a> but you can’t use normal env variables inside cron. but don’t be dishearted there is a way.<br>
 Embed the file inside job.sh which contains the script 👉</p>
 <div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token shebang important">#!/bin/sh</span>
-python3 telegram.py</code></pre></div>
-<p>And don’t forget to give all the files executable permission</p>
+/usr/bin/python3 /home/antony/Code/Telegram/telegram.py</code></pre></div>
+<p>Always put the full path, because cron don’t get hold of the path and environ variables.
+And don’t forget to give all the files executable permission</p>
 <div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">chmod</span> +x job.sh
 <span class="token function">chmod</span> +x filename.ext</code></pre></div>
 <p>If problems arise :</p>

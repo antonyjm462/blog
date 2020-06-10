@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Antony's Blog]]></title><description><![CDATA[A starter blog for day to day improvements]]></description><link>http://blog.antonyjmalakkaran.codes</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Jun 2020 17:11:08 GMT</lastBuildDate><item><title><![CDATA[Setup Contact in Angular Web App]]></title><description><![CDATA[Setup Contact in Angular Web App I’m sure everyone likes a comment box in their website, Today I set up a comment box for an Angular project…]]></description><link>http://blog.antonyjmalakkaran.codes/setup-contact/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/setup-contact/</guid><pubDate>Wed, 03 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Setup Contact in Angular Web App&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Antony's Blog]]></title><description><![CDATA[A starter blog for day to day improvements]]></description><link>http://blog.antonyjmalakkaran.codes</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Jun 2020 15:45:16 GMT</lastBuildDate><item><title><![CDATA[About life.]]></title><description><![CDATA[About life. First of all sorry for the long pause in blogging.😢
+I have not done many worth things lately and being slacking off.
+But today…]]></description><link>http://blog.antonyjmalakkaran.codes/life/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/life/</guid><pubDate>Wed, 10 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;About life.&lt;/h2&gt;
+&lt;p&gt;First of all sorry for the long pause in blogging.😢&lt;br&gt;
+I have not done many worth things lately and being slacking off.&lt;br&gt;
+But today something hit me, an App called the life clock 🌱, It made me realize that I have only 18255 or more days (If nothing happens 😉) to live.
+which means I only have 54765 meals, 49 long vacations, and 2607 weekends.⏰&lt;br&gt;
+So from now on, I made a pledge to live my life to the fullest and make most out of my time to make a difference in this world.&lt;br&gt;
+Starting with:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Strict Timetable ⏲&lt;/li&gt;
+&lt;li&gt;Blogging only on weekends with enough content and long post 📯&lt;/li&gt;
+&lt;li&gt;I am still thinking of it 🤔&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;From now on Turbo mode ✨&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Setup Contact in Angular Web App]]></title><description><![CDATA[Setup Contact in Angular Web App I’m sure everyone likes a comment box in their website, Today I set up a comment box for an Angular project…]]></description><link>http://blog.antonyjmalakkaran.codes/setup-contact/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/setup-contact/</guid><pubDate>Wed, 03 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Setup Contact in Angular Web App&lt;/h2&gt;
 &lt;p&gt;I’m sure everyone likes a comment box in their website, Today I set up a comment box for an Angular project and felt like sharing the process.&lt;br&gt;
 It’s easier than it sounds, I set up an email service which helps anyone to contact you through email and sent a response back after they do so.&lt;br&gt;
 so without further adieu lets get to it. Here Come the steps 👉&lt;br&gt;&lt;/p&gt;
@@ -78,13 +92,20 @@ then follow this format&lt;/p&gt;
 &lt;span class=&quot;token comment&quot;&gt;# |  |  |  |  |&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# *  *  *  *  *   command to be executed&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;for example:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;22&lt;/span&gt; * * * /bin/sh /home/antony/Code/Telegram/job.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ya I know, for automation of udemy script 🙈
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token assign-left variable&quot;&gt;MAILTO&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;antonyjm462@gmail.com
+&lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;SHELL&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;/bin/bash
+&lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;/bin:/usr/bin:/my/path/bin
+&lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;DISPLAY&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;:0
+&lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;XAUTHORITY&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;/home/antony/.Xauthority
+&lt;span class=&quot;token number&quot;&gt;40&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;22&lt;/span&gt; * * * &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt; /etc/profile&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; /home/antony/Code/Telegram/job.sh &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; /home/antony/Code/Telegram/cron.log &lt;span class=&quot;token operator&quot;&gt;&lt;span class=&quot;token file-descriptor important&quot;&gt;2&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token file-descriptor important&quot;&gt;&amp;amp;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ya I know, for automation of udemy script 🙈.
+you can also define the path var inside the crontab also with other variables for the script to work.&lt;br&gt;
 to create a cron job for more info on formatting use &lt;a href=&quot;https://crontab.guru/&quot;&gt;guru&lt;/a&gt; but you can’t use normal env variables inside cron. but don’t be dishearted there is a way.&lt;br&gt;
 Embed the file inside job.sh which contains the script 👉&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token shebang important&quot;&gt;#!/bin/sh&lt;/span&gt;
-python3 telegram.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And don’t forget to give all the files executable permission&lt;/p&gt;
+/usr/bin/python3 /home/antony/Code/Telegram/telegram.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Always put the full path, because cron don’t get hold of the path and environ variables.
+And don’t forget to give all the files executable permission&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; +x job.sh
 &lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; +x filename.ext&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If problems arise :&lt;/p&gt;
