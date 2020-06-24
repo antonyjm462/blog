@@ -1,4 +1,501 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Antony's Blog]]></title><description><![CDATA[A starter blog for day to day improvements]]></description><link>http://blog.antonyjmalakkaran.codes</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Jun 2020 15:45:16 GMT</lastBuildDate><item><title><![CDATA[About life.]]></title><description><![CDATA[About life. First of all sorry for the long pause in blogging.😢
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Antony's Blog]]></title><description><![CDATA[A starter blog for day to day improvements]]></description><link>http://blog.antonyjmalakkaran.codes</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Jun 2020 15:30:46 GMT</lastBuildDate><item><title><![CDATA[Emotion Analysis using Machine Learning Part-2]]></title><description><![CDATA[Emotion Analysis using Machine Learning  The Machine Learning models used are : SGDClassifier loss=‘hinge’ as hyperparameter  The model used…]]></description><link>http://blog.antonyjmalakkaran.codes/week_2/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/week_2/</guid><pubDate>Mon, 22 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Emotion Analysis using Machine Learning&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;2nd week of blogging&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;The Machine Learning models used are :&lt;/h3&gt;
+&lt;h4&gt;SGDClassifier&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;loss=‘hinge’ as hyperparameter &lt;/li&gt;
+&lt;li&gt;The model used because it converges faster than other descent techniques&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Results:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Model Performance metrics:
+------------------------------
+Accuracy: 0.8486
+Precision: 0.8429
+Recall: 0.8486
+F1 Score: 0.8411&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Model Classification report:
+------------------------------
+              precision    recall  f1-score   support
+
+       Anger       0.72      0.61      0.66      1459
+         Bad       0.38      0.18      0.24      1810
+      Digust       0.58      0.37      0.45       206
+        Fear       0.92      0.88      0.90     12716
+       Happy       0.71      0.90      0.80      7672
+         Sad       0.92      0.92      0.92     16902
+    Surprise       0.62      0.39      0.48       844
+
+    accuracy                           0.85     41609
+   macro avg       0.69      0.61      0.64     41609
+weighted avg       0.84      0.85      0.84     41609&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/989c7cba2e231992224014743af046af/00b70/clf.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.75675675675677%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAAD/UlEQVQ4y0WU7U9bZRjG+0H96Df/CGgpLX07bCwrTJNFyXwlM8sgIRtuE6dsgIOFZIq8dCAM0E2zGJbM+GF+VefQuShTBwwGAjoYG5Sy0hdaaEvfaAs/73M240nunOckz3Pd131d13N0isOBUrwLpbyavW8e53RDE41nmqlvPEPd6QbeP9XAyboGjp+sp7auUepD3pN389kWjp+oxeGwUVTkxGbbjaI40DnsNqxKCYZT13nRNcFaNEMqA/H0DptpCMa2pXa0ty+yzbR7kwerSXaA8XuzOOwm9MYqzJaXKVYs6OwCuHuPk3PfjDNww80jXxxvKE0kkWUjnsEbTjO/mmBweIVro6vMLseYf7xJVhBH7v6F3WrEuKsWs+NVFIcZndVqpbS0FL8/wFZmh5G5MBMLG6S2ssRTWTzBBLfnQigdd6j4YpL7K1HcgTiJLfhjdFIDNL1Uj2XPWyh2AbTZbAJYxpw7IGPlhGGCBV+ScTk4sRLDs5ZienmTzh8W+fwXD2OPokx7YmzLyGP3ZrCZDVhfP4tt30EUm+kJ4F6nkzszyyz4k4QjKZbX4rQOzdP76yJriRwhqSV/nDkZ9dtRLz/NBJFhGJ2Y0gCLD5/Dsf9tHJbC/0YuY14YhuLbROJZgmLM8FKEodkAPReHuXx1jEVp9lCYT7hj/C3A6jM+NYOlUM++Y22UHDiMvUgAzWYzTmcpHq9f3N1hPZpiPZbWXHzwMMjzLzRgVrqIpLYRnwhuJAnJni2ZeWR8iiKjngMfuCh7o0rYGlWGFkrLyvAGQqRlU1ROxZI57YBvLUF7903au36mu+8mg1+PEFhPE4ykNQ3vTs5gMuRT2dzN/ooqLCbjEw2d4rL7sU+c2yYs3TckgFGxUS31mb3v49nnjkrWPiKWypGUzCQzamymKBTA2o97ee1QNUWFTwE1hv4w6Rwau00ZLynjqw3U9ZI43tk1JHWD9o7v+GpwmJzGcBaDPo+mjgEOVh7BVFiAzmKxiIZOljw+yZ2YorKTQMeSW1IZTc+NzadM/1nlGZ2Ib2nRvqempjHk59HafZFDVUcoNBb8n0OPN0hCrlpI9AnHMnL1cjJeFv9GGreEe3ghzPVxD590fE/PpVv85o5z5cc/0Qugq/cSVdU1GFVANTYqw0Aopjm7nkAcRRNd5eWP7rCwluXLES/XpsMkZJNkm47fA9RfvaUBXrp8hZpj71JgMKh32U5JSQmdrm76Bi5y/tN+unoHuND/mVad3f20nu+jprmD2hYXba4LtLT1UNnkouJEI2rsjta8wyvl5fLXKUKnKIr8ghwirh6DdFC7FBQYZP3kOz8vT1ubZRyTlF6fr2llLtBjNZtQz6tAqnTq+l/OrYsYTV49hwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;fig:&quot;
+        title=&quot;fig:&quot;
+        src=&quot;/static/989c7cba2e231992224014743af046af/fcda8/clf.png&quot;
+        srcset=&quot;/static/989c7cba2e231992224014743af046af/12f09/clf.png 148w,
+/static/989c7cba2e231992224014743af046af/e4a3f/clf.png 295w,
+/static/989c7cba2e231992224014743af046af/fcda8/clf.png 590w,
+/static/989c7cba2e231992224014743af046af/00b70/clf.png 733w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;LogisticRegression&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;penalty=‘l2’, C=1 as hyperparameter&lt;/li&gt;
+&lt;li&gt;The model used because its simplest model&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Model Performance metrics:
+------------------------------
+Accuracy: 0.8488
+Precision: 0.8477
+Recall: 0.8488
+F1 Score: 0.8469&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Model Classification report:
+------------------------------
+              precision    recall  f1-score   support
+
+       Anger       0.75      0.62      0.68      1459
+         Bad       0.39      0.40      0.40      1810
+      Digust       0.57      0.35      0.44       206
+        Fear       0.91      0.88      0.89     12716
+       Happy       0.78      0.85      0.81      7672
+         Sad       0.90      0.93      0.91     16902
+    Surprise       0.60      0.38      0.46       844
+
+    accuracy                           0.85     41609
+   macro avg       0.70      0.63      0.66     41609
+weighted avg       0.85      0.85      0.85     41609&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a1682a723f48e5861f0932f6ab3bce7d/00b70/reg.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 80.4054054054054%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAAD/UlEQVQ4y0WU7U9bZRjG+0H96Df/CGgpLX07bCwrTJNFyXwlM8sgIRtuE6dsgIOFZIq8dCAM0E2zGJbM+GF+VefQuShTBwwGAjoYG5Sy0hdaaEvfaAs/73M240nunOckz3Pd131d13N0isOBUrwLpbyavW8e53RDE41nmqlvPEPd6QbeP9XAyboGjp+sp7auUepD3pN389kWjp+oxeGwUVTkxGbbjaI40DnsNqxKCYZT13nRNcFaNEMqA/H0DptpCMa2pXa0ty+yzbR7kwerSXaA8XuzOOwm9MYqzJaXKVYs6OwCuHuPk3PfjDNww80jXxxvKE0kkWUjnsEbTjO/mmBweIVro6vMLseYf7xJVhBH7v6F3WrEuKsWs+NVFIcZndVqpbS0FL8/wFZmh5G5MBMLG6S2ssRTWTzBBLfnQigdd6j4YpL7K1HcgTiJLfhjdFIDNL1Uj2XPWyh2AbTZbAJYxpw7IGPlhGGCBV+ScTk4sRLDs5ZienmTzh8W+fwXD2OPokx7YmzLyGP3ZrCZDVhfP4tt30EUm+kJ4F6nkzszyyz4k4QjKZbX4rQOzdP76yJriRwhqSV/nDkZ9dtRLz/NBJFhGJ2Y0gCLD5/Dsf9tHJbC/0YuY14YhuLbROJZgmLM8FKEodkAPReHuXx1jEVp9lCYT7hj/C3A6jM+NYOlUM++Y22UHDiMvUgAzWYzTmcpHq9f3N1hPZpiPZbWXHzwMMjzLzRgVrqIpLYRnwhuJAnJni2ZeWR8iiKjngMfuCh7o0rYGlWGFkrLyvAGQqRlU1ROxZI57YBvLUF7903au36mu+8mg1+PEFhPE4ykNQ3vTs5gMuRT2dzN/ooqLCbjEw2d4rL7sU+c2yYs3TckgFGxUS31mb3v49nnjkrWPiKWypGUzCQzamymKBTA2o97ee1QNUWFTwE1hv4w6Rwau00ZLynjqw3U9ZI43tk1JHWD9o7v+GpwmJzGcBaDPo+mjgEOVh7BVFiAzmKxiIZOljw+yZ2YorKTQMeSW1IZTc+NzadM/1nlGZ2Ib2nRvqempjHk59HafZFDVUcoNBb8n0OPN0hCrlpI9AnHMnL1cjJeFv9GGreEe3ghzPVxD590fE/PpVv85o5z5cc/0Qugq/cSVdU1GFVANTYqw0Aopjm7nkAcRRNd5eWP7rCwluXLES/XpsMkZJNkm47fA9RfvaUBXrp8hZpj71JgMKh32U5JSQmdrm76Bi5y/tN+unoHuND/mVad3f20nu+jprmD2hYXba4LtLT1UNnkouJEI2rsjta8wyvl5fLXKUKnKIr8ghwirh6DdFC7FBQYZP3kOz8vT1ubZRyTlF6fr2llLtBjNZtQz6tAqnTq+l/OrYsYTV49hwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;fig:&quot;
+        title=&quot;fig:&quot;
+        src=&quot;/static/a1682a723f48e5861f0932f6ab3bce7d/fcda8/reg.png&quot;
+        srcset=&quot;/static/a1682a723f48e5861f0932f6ab3bce7d/12f09/reg.png 148w,
+/static/a1682a723f48e5861f0932f6ab3bce7d/e4a3f/reg.png 295w,
+/static/a1682a723f48e5861f0932f6ab3bce7d/fcda8/reg.png 590w,
+/static/a1682a723f48e5861f0932f6ab3bce7d/00b70/reg.png 733w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;SGDClassifier and LogisticRegression has the accuracy 0.8486.&lt;/code&gt;&lt;/p&gt;
+&lt;h4&gt;MultinomialNB:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Naive Bayes family of algorithms is popular machine learning algorithms for creating text classification models.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Model Performance metrics:
+------------------------------
+Accuracy: 0.7892
+Precision: 0.7725
+Recall: 0.7892
+F1 Score: 0.7636&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Model Classification report:
+------------------------------
+          precision    recall  f1-score   support
+
+   Anger       0.80      0.24      0.37      1459
+     Bad       0.38      0.11      0.17      1810
+  Digust       0.00      0.00      0.00       206
+    Fear       0.85      0.85      0.85     12716
+   Happy       0.79      0.74      0.76      7672
+     Sad       0.77      0.94      0.84     16902
+Surprise       0.67      0.07      0.12       844
+
+accuracy                           0.79     41609
+macro avg       0.61      0.42      0.44     41609
+weighted avg       0.77      0.79      0.76     41609&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3cbba2ed660e762217312a4cc95d328f/c54b3/nb.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 80.4054054054054%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAAD0UlEQVQ4y2WT60+bZRjG+XOUtvRED5S2HAQM21zEjMM4DF1mskWyGSYThFQz9ZMfNH7aYqKJH5wmhKkjCww3F6AcJnMoA8KxJ9rSQg+0L7SlLT+ft7BF44frvZ/ceZ4r131d91tkNBqwlFv56tshvv9lgscTM0xOPcE5/YRx5yw/P5jk7ugkD8dn+HXMSX3/Hc4M3OH3qTnuj4xRWWVDqapDra7HbC6lyGgwUG61cc+5xlN3GikNmRxkgXQePJEcrt0sibR8ztJ4e5GWbxZJiAvBUITaGjtKbTMlpW2UmbXHhHZ7BQsrbnalHJ7wPt6dFMlUlr2DLH9uxJldjfHHWozx5QjXB5fou7tMPH2E2xfktSorJZZONNZ3MBvVFBkKhHbWXV4ODo/YCEpsbEuC7JCYlGF2JcrE4i6PF3YYnQ/hGF7h85E1Yqk8Lm+AmqpyNNWX0NddxmwoeUFYweKaj3gKYvtZ4ge5AnlSzLy0JfHcmyS8d8iKL0nteyPUXx0hIuXxBcNU2y3oT1/GeLYLk151PLJNKJxfdrGTyJEQypKpQyQxcnz/kOeePRbccZJifJc/galpCEvLENvRDO6tINU2C+ZzXViarmHUKikqLdVjr6hg3e0nLcJIio8kIAcTiqZovDhYwJbwNpLMMjobYOxJAMGPxx+i0lpGZdv71HR+gEEjCHU63UsPhSj29jMFpLLySAk0tlto7bdYcUfFBBm8uyl8kVSBcFN4WCEIT128zhvv3kCvVpx4KBRuev0I2wSZWBFxW/ZQPk/O+bn3aJN2xwSdN51ML0dZEl6mcscKbRYzjVd6aOnqRatS/DdlWWEsmRbInKyN8DNzxLpI3tA5jOHtYR7MBZjfiCIWAJcvgLXMTOfVXi51D6D+N+ELhVJK9jDPfiZfqLsi3WAkzbPVKI9mfJw+8yUNb31NRPS3tnfEMpu40t1PV48DlbJYDqUUm83O2olCOeXjpLOFGo6lRDgHZPJHeP1Ril+5gUrxIcGwhDewjdlk4lrPAN29n6BUvPp/hTFJXpdcgVzew7nNPZyrcR6Kv+T+32E++/EpXww+I5TIs+rZxmg00vPRx/Q5PkVRfEJos9lYXt0opBvYSRQQSxwQikn89leQ4bktfprx8MO0h9tTLr6bdeMSayTvrkzY1+9gwHGTYpnQJCSXlVloam6ho+MCrW3tAh20tcu4QENTq0AbZ8+dL+D1Nxs51dBMS2u7eHMe+X1tbZ1ALbJ9RWazudDUaDRo1Orj+hJqYbSCEpUSnVaDXqdFJ3qloqrFXa3oye/lKWXI538AJ0WTEwelcCMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;fig:&quot;
+        title=&quot;fig:&quot;
+        src=&quot;/static/3cbba2ed660e762217312a4cc95d328f/fcda8/nb.png&quot;
+        srcset=&quot;/static/3cbba2ed660e762217312a4cc95d328f/12f09/nb.png 148w,
+/static/3cbba2ed660e762217312a4cc95d328f/e4a3f/nb.png 295w,
+/static/3cbba2ed660e762217312a4cc95d328f/fcda8/nb.png 590w,
+/static/3cbba2ed660e762217312a4cc95d328f/c54b3/nb.png 727w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;Pipeline with CountVectorizer, TfidfTransformer, MultinomialNB:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;As pipeline often gives promising results to the initial model itself.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Model Performance metrics:
+------------------------------
+Accuracy: 0.7225
+Precision: 0.7134
+Recall: 0.7225
+F1 Score: 0.6791&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Model Classification report:
+------------------------------
+          precision    recall  f1-score   support
+
+   Anger       0.92      0.01      0.02      1459
+     Bad       0.00      0.00      0.00      1810
+  Digust       0.00      0.00      0.00       206
+    Fear       0.85      0.78      0.81     12716
+   Happy       0.88      0.51      0.64      7672
+     Sad       0.64      0.96      0.77     16902
+Surprise       0.00      0.00      0.00       844
+
+accuracy                           0.72     41609
+macro avg       0.47      0.32      0.32     41609
+weighted avg       0.71      0.72      0.68     41609&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d63e90c7905873d607ffdf459df78d8f/a0209/pipe.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 82.43243243243244%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAADq0lEQVQ4y22U7U9bZRjG+VP8xsboC6UtBfoS2AZMZ/QDG9HoBs4wAbvyUlgUTWayF7MvqHHJvphtitkUYeiGM/ugWfxituimm5owC7S0tPQN+gJtoeXn/ZxCmIknufLc5+Q8v1znuu/nVNTV1dHQ0EBvn5sh7zADg14Gh4bpHxjE7emnu/eUJlX3uQewNHRQazvKKc+QqB+7o5HaWrvIic1mpcJiseBwOPDNhygUYb2wxfrGFvlNWJN6IZZnbjlHTu7DsRz1LeOYm66yJM+jiVUOHTpAle5FdMYO6utNZaDT6cS3UAZm80UBlQRcIiP17NIafwezJDKbLISz1Ld/jeXlG4QTBZYF2NbahM7SgaH+DWx1hl3g07mA5iy9ViAlyoillWyBh74V7s8m8AnskdTNp3/G5b3HYjzH0nKctpYm9PbXqWnqwWbRbwNdLuYDSwiv7E6KnCibL2nunvgzRNOb+MSt/dgUtlcniKxsEE2maD3gouZAF+bDHmxm/a7DWZ+/7HB9Q5NymFrbIJ6Rjam8ZFgiGEmhq71Ipe4c/lBaMk3Qut8lsDexHRmkzlRdBrrE4Vwg9F+Hmwpe5Mbdecbv+FhdKxJbzdM3couTQ9PEU2WHB5ucNLa/hevYCBajAE0mk3R5J0M0dyrD3EaRYDSLrn2KypcmJK8sm+LySSDNY39KGlZiMRzjYLOL5lf6eL57FLNBgGazuZzh4hIyGZpDNS7SYJLS2dFLvzE09oC7j2Pcm11h8kGY6V/DSBIsx1fZ73JwuNPNEff7mHT7tufw2S6v73Y5pXVcxiW2Ruf4X7R/9gcjM0+58NM80ewmoUiMJpeTo90eurxnMFZXUWHdzvBZhwqspJyq+Qsm8lz5JcwnP/p57YPvOXH2jjRLMpUMXQ47x3vkVL1zFr0Cqk9WJ+X/5lCtyXSeRCpHsbTF8vIqhkove57z4A+uEIkncQrwpNvL8HvnqN63d2dsXHJSglpumdwGWYGpE6Oggeg685EssXSBf4IprC98iqnlY0ISgzp6dnsjfZ5h3j1zYReoHAYjcdRV3JZMkDZGf4YKPPLnCSS3tLrtw99pOf+QZF4mIpsToB3v6VHOXxyjau8eydBq1R5e++JLbs38wM1vb3PzuxmmRVNSX742yaUrk1y9Ps3lzydxnPgIe9cY1ydv89XEN9qf6nhnFz29b6PX66iw2WwoGQx6kUGTcWc1yiovqVWpxmjEXGPAaq6RzXrtPbVXfaXqhar/BYyylAaQJvzgAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;fig:&quot;
+        title=&quot;fig:&quot;
+        src=&quot;/static/d63e90c7905873d607ffdf459df78d8f/fcda8/pipe.png&quot;
+        srcset=&quot;/static/d63e90c7905873d607ffdf459df78d8f/12f09/pipe.png 148w,
+/static/d63e90c7905873d607ffdf459df78d8f/e4a3f/pipe.png 295w,
+/static/d63e90c7905873d607ffdf459df78d8f/fcda8/pipe.png 590w,
+/static/d63e90c7905873d607ffdf459df78d8f/a0209/pipe.png 725w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;MultinomialNB and .Pipeline with CountVectorizer, TfidfTransformer, MultinomialNB have accuracy  0.7892 and 0.7225.&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;The Deep Learning models used are:&lt;/h3&gt;
+&lt;h4&gt;CNN model:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Deep learning algorithms with CNN is expected to work well with text classification&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CNN with and complied using loss = ‘categorical_crossentropy’ , optimizer = adam , metrics = accuracy
+Model: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_1 (Embedding)      (None, 157, 500)          54695500  
+_________________________________________________________________
+conv1d_1 (Conv1D)            (None, 157, 128)          192128    
+_________________________________________________________________
+conv1d_2 (Conv1D)            (None, 157, 64)           24640     
+_________________________________________________________________
+conv1d_3 (Conv1D)            (None, 157, 32)           4128      
+_________________________________________________________________
+conv1d_4 (Conv1D)            (None, 157, 16)           1040      
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 2512)              0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 2512)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 100)               251300    
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 100)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 7)                 707       
+=================================================================
+Total params: 55,169,443
+Trainable params: 55,169,443
+Non* trainable params: 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;trained the model which produced Accuracy: 84.063542, Loss: 45.061589. Which is less the ML models.&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8217a171c47bae506806defcadef9a9e/8ae3e/cnn.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 83.1081081081081%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADAUlEQVQ4y12TO2tcRxTHFwxuUqVx6e/gIkWIq3yDNEnnBJxCjSrbBAeChdQIEkiIAsGBYFtubD1wYmNFgWAJjFDQKqvIK1mrXela+969u3fe75m763N1ZRA+xTDMzO/8z2sK43c2OrU0TWHlnA8GA4wxQgjWEMLpfTo6vc1fw1LI91EXf/bLxu2lV0xoIgxhspewahNFHXLSxScx32ug1lBwaZS2zvvv5p5Srgu5n/Kb3pXpta/ulYiwRHlhAlbhsMOjga60aaUr/otQPdFce2Ud0F9MLYP3Qh4zE2q/lT3aa7LjWBk/ipkr1+mfu72Jxf27G42jnmgho9xIWw/w1z+vDajKYUhSCOWQ8NsRqvYE0F1ito+SR8XW5w92flx/c9imjUzZKZMpT/6+iYU9C7s9pLP/1B4W20g4LL12KZKh0pWvIeAT/LKWzG+dFBvYhTHAzodvHm8nLFcepfU+ml49uL/V5MoxHaT1PaJf/N8sRcN2onYa5N5mVKxjbYPUGTzzrIyELkAbFJg2XaIS6ZjyTEFjxqubtQsf3bo+s2zTcY/axlAmwkmb5spza1VufAZLKYEW2hk3otJR5QH++9/aB598++XUwmEDVVskpppIz6DaBtgwv3nMlMnChsFgXBCZBQxlAGVpw4Dq4w65+0fx4se3J394BqXBWVAZDHrPd+tC2zOYCwkwNykWLoepCm48Xlo/+PDTqYnZJ/tR/7iNIWwJeYewUe1an571WUgFmgAz6YRJYRi4DkNm+ljD+W9LG4XL125+vwwvudQhpLsRDIM9g6XSuTKVGQbKTKddrFtID81o/q/Spas37vy6otLxkCqY8ForMdZlsHOWMA4Y0QFex9wpl0KFt47Q83L/zsrrhZ12H0lo2OJ2q9zE0NvmgIZ0lMGQA+ScUAGta8Y0JopJ3cOydDRYr8Q/vThY3e9gpiod+rTUqLQRIDGixr4LG4xSCl6EkM452HvvCaFamwQTmEc4h9QQJvApcz0oc+H8fz6/yV3ACLz34cfn7C3f+5x0jeI9KQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;fig:&quot;
+        title=&quot;fig:&quot;
+        src=&quot;/static/8217a171c47bae506806defcadef9a9e/fcda8/cnn.png&quot;
+        srcset=&quot;/static/8217a171c47bae506806defcadef9a9e/12f09/cnn.png 148w,
+/static/8217a171c47bae506806defcadef9a9e/e4a3f/cnn.png 295w,
+/static/8217a171c47bae506806defcadef9a9e/fcda8/cnn.png 590w,
+/static/8217a171c47bae506806defcadef9a9e/8ae3e/cnn.png 756w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;Bidirectional LSTM model:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;removed the spatial dropout layer as it decreases the accuracy of the model, which is inferred from training&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CNN with and complied using loss = ‘categorical_crossentropy’ , optimizer = adam , metrics = accuracy&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            [(None, 157)]        0                                            
+__________________________________________________________________________________________________
+embedding (Embedding)           (None, 157, 500)     54695500    input_1[0][0]                    
+__________________________________________________________________________________________________
+bidirectional (Bidirectional)   (None, 157, 256)     644096      embedding[0][0]                  
+__________________________________________________________________________________________________
+conv1d (Conv1D)                 (None, 155, 64)      49216       bidirectional[0][0]              
+__________________________________________________________________________________________________
+global_average_pooling1d (Globa (None, 64)           0           conv1d[0][0]                     
+__________________________________________________________________________________________________
+global_max_pooling1d (GlobalMax (None, 64)           0           conv1d[0][0]                     
+__________________________________________________________________________________________________
+concatenate (Concatenate)       (None, 128)          0           global_average_pooling1d[0][0]   
+                                                             global_max_pooling1d[0][0]       
+__________________________________________________________________________________________________
+dense (Dense)                   (None, 7)            903         concatenate[0][0]                
+==================================================================================================
+Total params: 55,389,715
+Trainable params: 55,389,715
+Non-trainable params: 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;The Bidirectional LSTM has the highest accuracy of all the models Accuracy: 86.488497, Loss: 36.384022&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/126eeb9613e7e7a1114488a1fd549d61/d67ca/lstm.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 85.8108108108108%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADIUlEQVQ4y02TW4scRRTH+1PsF1DRDyKITz4JPvmkECHgBWTRh7BiHoSQEELEh3jJKgY2ygoxWTSbLGKSdbMz7k4SdHZ2Z8ZJunumr1Vd96qu6u6cnlkWz0Nzuqp+dS71P14zN6FtzrUpXV3XprQ5QmmW5TnKclQQ4lxlXQXfqq6rqoLzjCv48eq6aWr7ydrfLy9v/NYLOVcpkXFO/IQOnmWTqJjM0HBG90dpiASmkkkF8Luf/Rjl1Kvqxhm5vLb/yqebv/ZmGTU5t1TZlLtJIsLCPM34MJa9SRFRS2UplAH4zZV1P8YeeLYs/ZSGSH6z47+//qTrE2uraWHGEd8apFe2R7sT7KciY+UJ/PaFO35CWlhrTbhsqubqbvDe9UfbE8xkGSA9mrE7B8lX9462x/kooik1RJgFfOrKdlzIFlZSznLu52qcysOIbg6S73ZGj0OKqBln8iAkv/eTL+8dPZpSqSyfwx9d60xzdgwHKRvFIiGGcAPw5T8POxMcJOxZrqa5un0Qn9vq7wVEabeAz/zSizD3lFJGayo0Ua4QNiUmYaZQ7uNLG0uvrqxu9Mq6CbH+L+VIWKbsIu0Lm30kjCda41Qori3wCVFMO9h+5+zP3gunLq39pWyd0xIzzbUruF7A3z44Qkwed5tLI8saCxsVmuoK/GFYPB7GH168tfTa51dv7YMaiHQnkdf3xpjPYUppwSRswAsHmaCqgq7KslXS6XM3vBdPn792H1qFWHkS+Y9+KI1tYWct1MxNRZVDvARHgK+rQton42zn3+nyxRsvvX7mh5tduA8KBGRvGAttjt8ZU0FECXBOFcBEaKarpFBEWjjwwRc/eUtvnV+9C9kQ3sJ90J1UoO1aSlCslqYKsRlMoasOcs6FC5DqT/nuCN//Z3r34eD7B5OV2+Otgxhg0HzpqhZmjCLCC6aGEesM0wgCMjnF6jDE3TG+2fUHM6aNXd0N3/i6c737FOAgwTCD3mIkuRCMc+h5hhnjklIYHlNQgagI4pwpw4X0M9oZgq50qyttwI5hN7d6btZa8KEWjJFWql1v2vXKWWht8z97DoTTlZCGwDpDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;fig:&quot;
+        title=&quot;fig:&quot;
+        src=&quot;/static/126eeb9613e7e7a1114488a1fd549d61/fcda8/lstm.png&quot;
+        srcset=&quot;/static/126eeb9613e7e7a1114488a1fd549d61/12f09/lstm.png 148w,
+/static/126eeb9613e7e7a1114488a1fd549d61/e4a3f/lstm.png 295w,
+/static/126eeb9613e7e7a1114488a1fd549d61/fcda8/lstm.png 590w,
+/static/126eeb9613e7e7a1114488a1fd549d61/d67ca/lstm.png 714w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I also found from the observation that the LSTM model works better for Sad, Happy, and Fear but the SGDClassifier works better on Anger, Bad, Surprise hence joined the model together making it a stacked model which provided a accuracy:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Accuracy: 0.883606912&lt;/li&gt;
+&lt;li&gt;Precision: 0.8874248006&lt;/li&gt;
+&lt;li&gt;Recall: 0.883606912&lt;/li&gt;
+&lt;li&gt;F1 Score: 0.8844271224 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0f90d139b445da2bd44f1e144e2d977d/6e9ba/stack.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 85.8108108108108%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADEUlEQVQ4y01TS29VVRQ+f8QJhIF/waE/QBIHJMaJcWQcOJAJxQkxDTBxQEDTABIKOqA1BKm0VUFNhNpCoe2F1tJ7vb29j9Pzuvv93mff6zo9pWEl57nXt771fSsrGh/G6ChCKDnnhBBWBYV3+FUf1Al1OtyicPCYf9Z+b2Luu4UtYxwWOhuSQYbb/byf4f0cZ0TtpWzINBVaG2esO399gQkNYMCGqflGdPLm6enn2niiApEOq9BJeS7KnOmEutcxLYSnwhrrpbYfnbubYxHVXXQz+mQr/el5fHa+Ob9VhDDOmO/kanWP/NyI13p0n1gkvTAlMCvjPr30RzpkUcUbAuUCdDzcKU5Nr/+wGittY2qb++zvVnHtcXNpF/ULCWAiTA3+4sYKFiaq7SJcJUS3C93o03uN9MyDnbnNnErfRXonFS+69LfNtJUr7UYA1tafubOGuKrAYGOBeSdjOXNg2IPN7NSttemn/TijMdIJVhs9OvN0bzsRXFW0xvnJX14OqYi898YYoQyYRHWJhOth08bm0uzyux9evDyzJGyIiekOFVKHmgF85a8W1y4yxsI0uZBUGG5CTg3TJbTzze0/oxOfffXtAmjLqUXMCANTsAC23t9a2WXyjWYhNdcewAWzwK9d+C8myy+7564+PP7B+csz/4TxmOnAlAcvnS/vb3SZrDWPAmWSSgvgFKkqSVppIX88eeNRdOLziSuLwDnkFnMrK7BfaqXGlRXYOQfMVDphR0R5aUegDUogYVsDst5Mvp5afOf9iamZx5AsFXRdNjqFMrYCW2sol4RXqhC3UIKrqouManqg/8L3v0bHPpm8uijciAhdlmVzgJU+0AwfXCjQg2XZyWXBvXIByXKA9EafLbxKnrxO17f7Py53v7y/8/u/KQjtD6UvQ81sMWWIqpTo7R5OsCZcZ8zsJnR1F82utBs9CvOfXdv/+PaLucYAICnixtpDt0EGJhTWBapoY4WQ4CoiFPpPhgQzgTEtqNzqpkzbis+Baz462mZo/mi34VJKF0VhjK51VacHKz1+K/4HE3qZoGUcHf8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;fig:&quot;
+        title=&quot;fig:&quot;
+        src=&quot;/static/0f90d139b445da2bd44f1e144e2d977d/fcda8/stack.png&quot;
+        srcset=&quot;/static/0f90d139b445da2bd44f1e144e2d977d/12f09/stack.png 148w,
+/static/0f90d139b445da2bd44f1e144e2d977d/e4a3f/stack.png 295w,
+/static/0f90d139b445da2bd44f1e144e2d977d/fcda8/stack.png 590w,
+/static/0f90d139b445da2bd44f1e144e2d977d/6e9ba/stack.png 731w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Preprocess:&lt;br&gt;
+&lt;a href=&quot;https://colab.research.google.com/drive/1NZBf4iDojvel3dHeU9AYzWWt5XM8Eggr&quot;&gt;https://colab.research.google.com/drive/1NZBf4iDojvel3dHeU9AYzWWt5XM8Eggr&lt;/a&gt;&lt;br&gt;
+MachineLearning:&lt;br&gt;
+&lt;a href=&quot;https://colab.research.google.com/drive/1UI4LPO9BfrkJYXEVudsii7XRXeVJXvJJ#scrollTo=HP6QeD8vzjKc&quot;&gt;https://colab.research.google.com/drive/1UI4LPO9BfrkJYXEVudsii7XRXeVJXvJJ#scrollTo=HP6QeD8vzjKc&lt;/a&gt;&lt;br&gt;
+Deep Learning:&lt;br&gt;
+&lt;a href=&quot;https://colab.research.google.com/drive/1gauXKeBIN9Piln_2_OxmLsk5g8U9f1f-#scrollTo=TKyIf6PhJRfE&quot;&gt;https://colab.research.google.com/drive/1gauXKeBIN9Piln_2_OxmLsk5g8U9f1f-#scrollTo=TKyIf6PhJRfE&lt;/a&gt;&lt;br&gt;
+Stacked Model:&lt;br&gt;
+&lt;a href=&quot;https://colab.research.google.com/drive/191BIy6tGDRfIi6eKNFhLM2IN7quwFdyr#scrollTo=ROunJKQlz_Lr&quot;&gt;https://colab.research.google.com/drive/191BIy6tGDRfIi6eKNFhLM2IN7quwFdyr#scrollTo=ROunJKQlz_Lr&lt;/a&gt;&lt;br&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Emotion Analysis using Machine Learning Part-1]]></title><description><![CDATA[Emotion Analysis using Machine Learning Hai,Everyone 👋 ,
+Sorry for the delay,During This time I done TCS ION internship, I would like to…]]></description><link>http://blog.antonyjmalakkaran.codes/week_1/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/week_1/</guid><pubDate>Tue, 16 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Emotion Analysis using Machine Learning&lt;/h2&gt;
+&lt;p&gt;Hai,Everyone 👋 ,&lt;br&gt;
+Sorry for the delay,During This time I done TCS ION internship, I would like to share with you my insights from this project.The aim of this project was to identify emotions Happy, Sad, Fear, Anger, Bad, Surprise, Disgust from a collection of English text, sentences or large paragraph which also should handle scenarios where there are:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    • sarcastic meaning
+    • double negation
+    • abbreviations&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The solution proposed is Machine Learning based Systems ie Text classification based on past observations.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Steps involved:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Data Collection: Gathering relevant datasets for Machine Learning based Systems&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Preprocessing: Text preprocessed to remove HTML tags, remove URLs, remove special characters, remove repetitions of letters in the same word, expand abbreviations, remove stop words for training deep learning model for classification of the text based on emotion.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Feature extraction: Transforms each text into a numerical representation in the form of a vector. E.g. bag of words [a vector represents the frequency in a predefined dictionary of words ]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Test-Train Split: Splitting the data into Testing and Training datasets.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Training: The algorithm is fed with training data consisting of feature sets. By using training data, the algorithm can learn the different associations between pieces of text and that a particular output label is expected for a particular input.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Testing: Once trained with enough training samples, the deep learning model can begin to make accurate predictions on unseen text with similar feature sets.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Text Classification Algorithms used:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Machine Learning Models:
+    • SGDClassifier
+    • LogisticRegression, MultinomialNB
+    • MultinomialNB 
+    • Pipeline of CountVectorizer, TfidfTransformer
+Deep Learning Models:
+    • CNN
+    • Bidirectional LSTM&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Metrics and Evaluation Methods used:&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Accuracy: the percentage of texts that were predicted with the correct tag.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Precision: the percentage of examples the classifier got right out of the total number of examples that are predicted for a given tag.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Recall: the percentage of examples the classifier predicted for a given tag out of the total number of examples it should have predicted for that given tag.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;F1 Score: the harmonic mean of precision and recall.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Confusion Matrix: A confusion matrix is a table that is often used to describe the performance of a classification model on a set of test data for which the true values are known. It allows the visualization of the performance of an algorithm.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Solution Approach:&lt;br&gt;
+As solution proposed is Machine Learning based Systems for Text classification based on past observations. Machine Learning model must be trained with the dataset since the Model doesn’t understand the words it needs to be converted into a format that can be inputted to model, the steps involved in the preparation of dataset are:&lt;/p&gt;
+&lt;p&gt;Data Collection and Conversion:
+As the datasets have different formats and have different labels, It needs to be converted into the same format. For that Emotions are classified into Happy, Sad, Anger, Disgust, Surprise, Fear, Bad. the dataset from different file formats is converted into  CSV format for easy loading and the labels are set to the above mentioned. For further preprocessing, the dataset is merged into a single merged CSV file based on the relevance of the datasets.
+the datasets used are:
+&lt;a href=&quot;https://www.kaggle.com/shrivastava/isears-dataset&quot;&gt;https://www.kaggle.com/shrivastava/isears-dataset&lt;/a&gt;
+&lt;a href=&quot;https://data.world/crowdflower/sentiment-analysis-in-text&quot;&gt;https://data.world/crowdflower/sentiment-analysis-in-text&lt;/a&gt;
+&lt;a href=&quot;https://www.kaggle.com/kutayeen/emotion-datasets-twitter&quot;&gt;https://www.kaggle.com/kutayeen/emotion-datasets-twitter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Preprocessing:
+Which mainly include Text Cleaning:
+-removing URLs from the text
+-stripping HTML tags from the text which is present after the scrapping using beautiful soup
+-converted all the text into lowercase
+-emoji present into its textual format using demojize
+-removed letters that are repeated in words
+-use map to expand contractions
+-remove all the twitter handles using twitter Tokenizer
+-remove stop words using nltk
+-Apply the PorterStemmer to keep the stem of the words.
+-remove all the special characters from the text&lt;/p&gt;
+&lt;p&gt;Modifying Data:
+As for implementing both deep learning and Machine learning model data is modified in different ways:
+For inputting into deep learning model the data must be of the form numerical array hence we use Keras tokenizer for tokenizing data, as all text must be of the same length we pad tokenized data with Keras pad&lt;em&gt;sequences with input&lt;/em&gt;length as the max text length. For TensorFlow model data and label must be of the same format hence we encode the emotion labels with LabelBinarizer from sklearn, making it data that can be feed into the model.
+For Machine learning model used the CountVectorizer for vectorizing the input and the label was not encoded.&lt;/p&gt;
+&lt;p&gt;Test-Train Split:
+For testing and training the model the data is split into test and train, here used sklearn train&lt;em&gt;test&lt;/em&gt;split for splitting data into 80% train and 20% test (test&lt;em&gt;size=0.20,random&lt;/em&gt;state=42).&lt;/p&gt;
+&lt;p&gt;Model fitting:
+the Machine learning Models used for classification are SGDClassifier, LogisticRegression, MultinomialNB, and a Pipeline of CountVectorizer, TfidfTransformer, MultinomialNB
+the Deep learning models considered are Bidirectional LSTM and CNN.&lt;/p&gt;
+&lt;p&gt;Evaluation metrics:
+These metrics are the Accuracy, Precision, Recall, and F1 score, these are used to find the model performance and to select the best model possible or to
+join two models for the best prediction.&lt;/p&gt;
+&lt;p&gt;Predict:
+To predict an arbitrary text these steps are followed:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Inputted text is preprocessed&lt;/li&gt;
+&lt;li&gt;the text is tokenized or vectorized based on the model&lt;/li&gt;
+&lt;li&gt;the model predicts the output&lt;/li&gt;
+&lt;li&gt;we use the inverse encoder to get the emotion of the text&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[About life.]]></title><description><![CDATA[About life. First of all sorry for the long pause in blogging.😢
 I have not done many worth things lately and being slacking off.
 But today…]]></description><link>http://blog.antonyjmalakkaran.codes/life/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/life/</guid><pubDate>Wed, 10 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;About life.&lt;/h2&gt;
 &lt;p&gt;First of all sorry for the long pause in blogging.😢&lt;br&gt;
