@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Antony's Blog]]></title><description><![CDATA[A starter blog for day to day improvements]]></description><link>http://blog.antonyjmalakkaran.codes</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Aug 2020 17:51:09 GMT</lastBuildDate><item><title><![CDATA[Snake Game with p5js]]></title><description><![CDATA[Snake Game with p5js 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Antony's Blog]]></title><description><![CDATA[A starter blog for day to day improvements]]></description><link>http://blog.antonyjmalakkaran.codes</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 04 Aug 2020 02:25:29 GMT</lastBuildDate><item><title><![CDATA[Snake Game with p5js]]></title><description><![CDATA[Snake Game with p5js 
 Hai,Everyone 👋 ,
 I have done Snake game as my 1st python microproject during the 1st semester of college, so I…]]></description><link>http://blog.antonyjmalakkaran.codes/week_6/</link><guid isPermaLink="false">http://blog.antonyjmalakkaran.codes/week_6/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Snake Game with p5js&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;6th week of blogging&lt;/code&gt;&lt;br&gt;
@@ -704,14 +704,14 @@ weighted avg       0.85      0.85      0.85     41609&lt;/code&gt;&lt;/pre&gt;&l
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a1682a723f48e5861f0932f6ab3bce7d/00b70/reg.png&quot;
+    href=&quot;/static/a1682a723f48e5861f0932f6ab3bce7d/13e20/reg.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 80.4054054054054%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAAD/UlEQVQ4y0WU7U9bZRjG+0H96Df/CGgpLX07bCwrTJNFyXwlM8sgIRtuE6dsgIOFZIq8dCAM0E2zGJbM+GF+VefQuShTBwwGAjoYG5Sy0hdaaEvfaAs/73M240nunOckz3Pd131d13N0isOBUrwLpbyavW8e53RDE41nmqlvPEPd6QbeP9XAyboGjp+sp7auUepD3pN389kWjp+oxeGwUVTkxGbbjaI40DnsNqxKCYZT13nRNcFaNEMqA/H0DptpCMa2pXa0ty+yzbR7kwerSXaA8XuzOOwm9MYqzJaXKVYs6OwCuHuPk3PfjDNww80jXxxvKE0kkWUjnsEbTjO/mmBweIVro6vMLseYf7xJVhBH7v6F3WrEuKsWs+NVFIcZndVqpbS0FL8/wFZmh5G5MBMLG6S2ssRTWTzBBLfnQigdd6j4YpL7K1HcgTiJLfhjdFIDNL1Uj2XPWyh2AbTZbAJYxpw7IGPlhGGCBV+ScTk4sRLDs5ZienmTzh8W+fwXD2OPokx7YmzLyGP3ZrCZDVhfP4tt30EUm+kJ4F6nkzszyyz4k4QjKZbX4rQOzdP76yJriRwhqSV/nDkZ9dtRLz/NBJFhGJ2Y0gCLD5/Dsf9tHJbC/0YuY14YhuLbROJZgmLM8FKEodkAPReHuXx1jEVp9lCYT7hj/C3A6jM+NYOlUM++Y22UHDiMvUgAzWYzTmcpHq9f3N1hPZpiPZbWXHzwMMjzLzRgVrqIpLYRnwhuJAnJni2ZeWR8iiKjngMfuCh7o0rYGlWGFkrLyvAGQqRlU1ROxZI57YBvLUF7903au36mu+8mg1+PEFhPE4ykNQ3vTs5gMuRT2dzN/ooqLCbjEw2d4rL7sU+c2yYs3TckgFGxUS31mb3v49nnjkrWPiKWypGUzCQzamymKBTA2o97ee1QNUWFTwE1hv4w6Rwau00ZLynjqw3U9ZI43tk1JHWD9o7v+GpwmJzGcBaDPo+mjgEOVh7BVFiAzmKxiIZOljw+yZ2YorKTQMeSW1IZTc+NzadM/1nlGZ2Ib2nRvqempjHk59HafZFDVUcoNBb8n0OPN0hCrlpI9AnHMnL1cjJeFv9GGreEe3ghzPVxD590fE/PpVv85o5z5cc/0Qugq/cSVdU1GFVANTYqw0Aopjm7nkAcRRNd5eWP7rCwluXLES/XpsMkZJNkm47fA9RfvaUBXrp8hZpj71JgMKh32U5JSQmdrm76Bi5y/tN+unoHuND/mVad3f20nu+jprmD2hYXba4LtLT1UNnkouJEI2rsjta8wyvl5fLXKUKnKIr8ghwirh6DdFC7FBQYZP3kOz8vT1ubZRyTlF6fr2llLtBjNZtQz6tAqnTq+l/OrYsYTV49hwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 80.4054054054054%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAAD6UlEQVQ4y02U+09TZxjHm+yPkdIL6+2cMqrlKrKyn5xxLnHGZIXI5CooUOYStpG4GHEkjoQtggIN2xJZTBbddBfEISYOcRN0tAIF6oHS9rTn9H7hu+c9dZeTvDnvyXmfz/t9nu/zviorz8P6xn7wjpOoPOxEa3tnYbR14HRzK5qa23DqdOHd1NwBZ1M7TjW3o7unF+8cexcmowlGYwV4vhRWKw8VbzHBbKtG8Zmf8Pbni4gnckikAYneUhIQxAyC8h5CUg5+MYe552F4txNgz7h7Cvv2FUFT0gCO209ADirObIK9+hD6v1nG0O01zKyE8MgXhZzMISRnsbGbhIcA86sRLKxLeLwaheelrACvjbtRVKRGia0LFu5AAWg0GuGor0c6kYQQTaPl2z9x+Zc1ZLM5ROIZPN+M4oFXxMW7K5heFPDCL8O3E0OegKPXJxWgoe4jcKXlsPIWqEwmE9501GODFq0GUvjuSQC3l4NY2JLwBwVvksJlfww/PAvinkfEnCeCZfr3f4Xc0QHwZZX/AWvrHJhf2sbSRgxiNEUpxtB/6xncv/uRJinhRB7rgozF9Si+nFnD7EpQAY6Nk0K1Grb3L4KzVcDKMSClzBSu78jYjmQRprpthdOY35Tw44IfH1+4A/eNJwhIWXiFONUyihWhUMPrE24FWNs2hNIDVeAZUK/Xw0HAUERGnOTsigmEpbQS8OusFypVI44eH1O+JTJKCMbJ8RT2XilUE/CIaxhl5dXgLeaCKfX1byESS4E8oMVMZQ5ZCvD6RFwY/BmXrsyi/7MZTE0vIRzPYzuc/LeGDNgwMAJbeRU4BmQpM4W7oqS0ylYgjkAkrWwgJbJK4Pd3PFC91oXjjTeU75CUUTZkLhcXq3Fu8CrsVTWwKEDTK4VySmloMZZDlExIZvdogzylmcfTv4L44uojDA3fR0vLBCanHirg0WuFlAeujKOCAc0ENBgMZIoDgSAppNMhUn1kUsYUysmsUtNoLKMAbt5coJo60Oj8qgAcGyeFxbg84kZlVXUByNqGKRTpnDE17GQIYprU5kkpmUCOe8jduRcR3Hrgw+DQXYxNP8bMyyz6Lo2gRKvB8OgUqmsOwvyPQlZDOZkB8agHk/BH8kr/xahQm6EMloQUJh8KuLcaQ4Ls/c0Xx6ezO3B+MgyTXouJr6dRc7C2AOQ4Dna7nW4PF3r7zqOtqxed3X1w9X2IHtd5nDnnQmuXCyc+6EJDazc6OnvgbDmLI01nUXf4GNhd8N6Jkygrs4GxVFarVZloNBrodFrolaGDVqtVhlpdBB2lZSjRoYTUaGnd63odDDS3kKEsnmXJs2uQ5n8Dfq+DfwGfs8EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -721,7 +721,7 @@ weighted avg       0.85      0.85      0.85     41609&lt;/code&gt;&lt;/pre&gt;&l
         srcset=&quot;/static/a1682a723f48e5861f0932f6ab3bce7d/12f09/reg.png 148w,
 /static/a1682a723f48e5861f0932f6ab3bce7d/e4a3f/reg.png 295w,
 /static/a1682a723f48e5861f0932f6ab3bce7d/fcda8/reg.png 590w,
-/static/a1682a723f48e5861f0932f6ab3bce7d/00b70/reg.png 733w&quot;
+/static/a1682a723f48e5861f0932f6ab3bce7d/13e20/reg.png 741w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;

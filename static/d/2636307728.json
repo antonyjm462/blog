@@ -1,1 +1,1 @@
-{"data":{"site":{"siteMetadata":{"title":"Antony's Blog","description":"A starter blog for day to day improvements","social":{"twitter":"untoldthinker"}}}}}
+{"errors":[{"message":"Expected Iterable, but did not find one for field SiteSiteMetadataSocial.twitter.","locations":[{"line":7,"column":9}],"path":["site","siteMetadata","social","twitter"]}],"data":{"site":{"siteMetadata":{"title":"Antony's Blog","description":"A starter blog for day to day improvements","social":{"twitter":null}}}}}
